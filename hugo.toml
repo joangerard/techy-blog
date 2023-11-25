@@ -1,5 +1,5 @@
 title = "Joan Gerard"
-baseURL = "https://techytech.netlify.app/"
+baseURL = "https://blog.gersaljo.com/"
 
 # Option 1 (recommended): adding the theme as a Hugo module
 theme = "bilberry"
