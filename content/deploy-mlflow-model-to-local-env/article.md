@@ -31,13 +31,13 @@ Para descargarse dicho artefacto localmente, es necesario ya tenerlo en
 nuestro entorno de Azure.
 
 
-![image](artifact-azure.png)
+{{ $image := .Resources.Get "artifact-azure.png"}}
 
 
 Lo comprimimos con este código ejecutado dessde nuestro notebook en
 Azure ML:
 
-``` {.python mathescape="" linenos="" numbersep="5pt" gobble="2" frame="lines" framesep="2mm"}
+```
     import os
     import zipfile
     
@@ -55,7 +55,7 @@ Azure ML:
 Y lo descargamos en nuestro ordenador:
 
 
-![image](descargar.png)
+{{ $image := .Resources.Get "descargar.png"}}
 
 
 Lo movemos a un directorio que crearemos llamado
@@ -63,7 +63,7 @@ Lo movemos a un directorio que crearemos llamado
 llamada `my_model` como se muestra a continuación.
 
 
-![image](directorio-ejemplo.png)
+{{ $image := .Resources.Get "directorio-ejemplo.png"}}
 
 
 # Instalación de MLflow
@@ -133,7 +133,7 @@ archivo `MLmodel` con la ruta del modelo en formato pickle
 junto con el entorno a ser instalado (`python_env.yaml`).
 
 
-![image](MLmodel.png){width="13cm"}
+{{ $image := .Resources.Get "MLmodel.png"}}
 
 
 El archivo `python_env.yaml` contiene información sobre qué
@@ -141,7 +141,7 @@ versión de python se debe usar y qué librerías se debe instalar para
 realizar el build y las dependencias del proyecto (requirements.txt).
 
 
-![image](python_env.png)
+{{ $image := .Resources.Get "python_env.png"}}
 
 
 Asegurarse que el puerto usado, en este caso el 65321, se encuentra
@@ -152,7 +152,7 @@ Al ejecutar el comando debería ver esta respuesta indicando que el
 endpoint está esperando requests:
 
 
-![image](corrida-exitosa.png)
+{{ $image := .Resources.Get "corrida-exitosa.png"}}
 
 
 # Realizar Inferencias
@@ -172,7 +172,7 @@ terminal como se muestra a continuación:
 Y obtenemos las etiquetas para el texto:
 
 
-![image](curl-command.png)
+{{ $image := .Resources.Get "curl-command.png"}}
 
 
 # Desplegar un modelo en un contenedor Docker
@@ -192,7 +192,7 @@ Desktop](https://www.docker.com/products/docker-desktop/) y habilitar
 los features experimentales:
 
 
-![image](docker-features.png)
+{{ $image := .Resources.Get "docker-features.png"}}
 
 
 Ejecutar el siguiente comando desde terminal:
